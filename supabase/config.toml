@@ -1,0 +1,26 @@
+# Supabase CLI config for local development. Settings not listed use the CLI defaults.
+# Docs: https://supabase.com/docs/guides/local-development/cli/config
+project_id = "pga-fantasy"
+
+[api]
+port = 54321
+
+[db]
+port = 54322
+
+[studio]
+port = 54323
+
+[inbucket]
+# Local email inbox for sign-up confirmations and magic links: http://127.0.0.1:54324
+port = 54324
+
+[auth]
+site_url = "http://localhost:5173"
+additional_redirect_urls = ["http://localhost:5173/**", "http://127.0.0.1:5173/**"]
+enable_signup = true
+
+[auth.email]
+enable_signup = true
+# Off locally so you can sign up and test without opening emails. Turn it on in production.
+enable_confirmations = false
